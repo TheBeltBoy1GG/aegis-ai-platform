@@ -1,0 +1,19 @@
+# 告诉编辑器：向上找到仓库根目录为止
+root = true
+
+# 所有文件通用规则
+[*]
+charset = utf-8                # 编码统一 UTF-8
+end_of_line = lf               # 换行统一 LF（跨平台一致）
+insert_final_newline = true    # 文件末尾自动补一个空行
+trim_trailing_whitespace = true # 自动删除行尾多余空格
+indent_style = space           # 缩进用空格，不用 Tab
+indent_size = 4                # Python 项目默认 4 空格缩进
+
+# YAML/JSON/TOML 用 2 空格缩进（这些格式 2 空格是惯例）
+[*.{yml,yaml,json,toml}]
+indent_size = 2
+
+# Markdown 不强制删行尾空格（否则会影响表格对齐等排版）
+[*.md]
+trim_trailing_whitespace = false
