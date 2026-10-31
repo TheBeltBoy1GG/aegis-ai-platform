@@ -1,0 +1,11 @@
+[project]
+name = "aegis-ai-platform"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["apps/*", "packages/*"]
+
+[tool.uv]
+package = false  # 声明根目录本身不是一个可安装的 Python 包
